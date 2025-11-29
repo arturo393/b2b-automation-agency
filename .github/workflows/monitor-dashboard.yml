@@ -1,0 +1,47 @@
+name: DeFi Monitor Dashboard Update
+
+on:
+  schedule:
+    # Cada 6 horas: 00:00, 06:00, 12:00, 18:00 UTC
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-dashboard:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      
+      - name: Fetch DeFi data
+        run: python scripts/collect_defi_data.py
+        
+      - name: Generate dashboard data
+        run: python scripts/generate_dashboard.py
+        
+      - name: Check for alerts
+        run: |
+          if [ -f scripts/send_alerts.py ]; then
+            python scripts/send_alerts.py
+          else
+            echo "Alert system not yet implemented"
+          fi
+        continue-on-error: true
+      
+      - name: Commit and push data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: Update dashboard data $(date +%Y-%m-%d\ %H:%M)" && git push)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

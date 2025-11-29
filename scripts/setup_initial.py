@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-🚀 Script de Setup Inicial para DeFi Newsletter
+🚀 Script de Setup Inicial para DeFi Monitor
 Guía interactiva para configurar el proyecto por primera vez.
 """
 
@@ -17,7 +17,7 @@ console = Console()
 def print_header():
     """Muestra el header del setup."""
     console.print(Panel.fit(
-        "[bold cyan]🚀 DeFi Newsletter - Setup Inicial[/bold cyan]\n"
+        "[bold cyan]🚀 DeFi Monitor - Setup Inicial[/bold cyan]\n"
         "[dim]Configuración automatizada del proyecto[/dim]",
         border_style="cyan"
     ))
@@ -65,7 +65,7 @@ def setup_jira():
         console.print("\n📝 Para obtenerlo:")
         console.print("   1. Ve a: [link]https://id.atlassian.com/manage-profile/security/api-tokens[/link]")
         console.print("   2. Click en 'Create API token'")
-        console.print("   3. Dale un nombre (ej: 'DeFi Newsletter')")
+        console.print("   3. Dale un nombre (ej: 'DeFi Monitor')")
         console.print("   4. Copia el token\n")
         
         jira_token = Prompt.ask("Ingresa tu API Token", password=True)
@@ -131,7 +131,7 @@ def show_next_steps():
         "   • docs/ROADMAP.md\n\n"
         "4. 🚀 Ejecuta tus primeros scripts:\n"
         "   • python scripts/collect_defi_data.py\n"
-        "   • python scripts/generate_newsletter.py",
+        "   • python scripts/generate_dashboard.py",
         border_style="green"
     ))
 

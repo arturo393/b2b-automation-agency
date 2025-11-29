@@ -1,0 +1,161 @@
+{
+  "updated_at": "2025-11-28T21:10:06.444525",
+  "version": "1.0",
+  "summary": {
+    "total_protocols": 10,
+    "avg_tvl": 34664707531.882965,
+    "total_tvl": 346647075318.82965,
+    "avg_apy": 0,
+    "max_apy": 0
+  },
+  "top_protocols": [
+    {
+      "name": "Binance CEX",
+      "tvl": 171599131503.05206,
+      "chain": "Multi-Chain",
+      "category": "CEX",
+      "change_1d": -0.5392219539421745
+    },
+    {
+      "name": "Aave V3",
+      "tvl": 32558615893.754025,
+      "chain": "Multi-Chain",
+      "category": "Lending",
+      "change_1d": 0.7881322940102677
+    },
+    {
+      "name": "Lido",
+      "tvl": 26231010798.6357,
+      "chain": "Multi-Chain",
+      "category": "Liquid Staking",
+      "change_1d": 0.12357485721506123
+    },
+    {
+      "name": "OKX",
+      "tvl": 23515478611.825016,
+      "chain": "Multi-Chain",
+      "category": "CEX",
+      "change_1d": -1.0829525477439148
+    },
+    {
+      "name": "Bitfinex",
+      "tvl": 21529611296.22841,
+      "chain": "Multi-Chain",
+      "category": "CEX",
+      "change_1d": 0.059252139195990594
+    },
+    {
+      "name": "Bybit",
+      "tvl": 19767083572.661915,
+      "chain": "Multi-Chain",
+      "category": "CEX",
+      "change_1d": -0.12625757188760645
+    },
+    {
+      "name": "Robinhood",
+      "tvl": 16948740572.89263,
+      "chain": "Multi-Chain",
+      "category": "CEX",
+      "change_1d": -0.27920671622362647
+    },
+    {
+      "name": "EigenLayer",
+      "tvl": 12400316325.060347,
+      "chain": "Ethereum",
+      "category": "Restaking",
+      "change_1d": -0.15960580478537167
+    },
+    {
+      "name": "WBTC",
+      "tvl": 11300661782.169724,
+      "chain": "Bitcoin",
+      "category": "Bridge",
+      "change_1d": -0.07238113786843314
+    },
+    {
+      "name": "Binance staked ETH",
+      "tvl": 10796424962.549726,
+      "chain": "Multi-Chain",
+      "category": "Liquid Staking",
+      "change_1d": 0.24138843351808248
+    }
+  ],
+  "all_protocols": [
+    {
+      "name": "Binance CEX",
+      "tvl": 171599131503.05206,
+      "chain": "Multi-Chain",
+      "category": "CEX",
+      "change_1d": -0.5392219539421745
+    },
+    {
+      "name": "Aave V3",
+      "tvl": 32558615893.754025,
+      "chain": "Multi-Chain",
+      "category": "Lending",
+      "change_1d": 0.7881322940102677
+    },
+    {
+      "name": "Lido",
+      "tvl": 26231010798.6357,
+      "chain": "Multi-Chain",
+      "category": "Liquid Staking",
+      "change_1d": 0.12357485721506123
+    },
+    {
+      "name": "OKX",
+      "tvl": 23515478611.825016,
+      "chain": "Multi-Chain",
+      "category": "CEX",
+      "change_1d": -1.0829525477439148
+    },
+    {
+      "name": "Bitfinex",
+      "tvl": 21529611296.22841,
+      "chain": "Multi-Chain",
+      "category": "CEX",
+      "change_1d": 0.059252139195990594
+    },
+    {
+      "name": "Bybit",
+      "tvl": 19767083572.661915,
+      "chain": "Multi-Chain",
+      "category": "CEX",
+      "change_1d": -0.12625757188760645
+    },
+    {
+      "name": "Robinhood",
+      "tvl": 16948740572.89263,
+      "chain": "Multi-Chain",
+      "category": "CEX",
+      "change_1d": -0.27920671622362647
+    },
+    {
+      "name": "EigenLayer",
+      "tvl": 12400316325.060347,
+      "chain": "Ethereum",
+      "category": "Restaking",
+      "change_1d": -0.15960580478537167
+    },
+    {
+      "name": "WBTC",
+      "tvl": 11300661782.169724,
+      "chain": "Bitcoin",
+      "category": "Bridge",
+      "change_1d": -0.07238113786843314
+    },
+    {
+      "name": "Binance staked ETH",
+      "tvl": 10796424962.549726,
+      "chain": "Multi-Chain",
+      "category": "Liquid Staking",
+      "change_1d": 0.24138843351808248
+    }
+  ],
+  "alerts": [],
+  "metadata": {
+    "source": "DeFi Llama API",
+    "refresh_interval": "6 hours",
+    "next_update": "Automated via GitHub Actions"
+  }
+}

@@ -19,7 +19,7 @@ def show_summary():
     # Header
     console.print("\n")
     console.print(Panel.fit(
-        "[bold green]🎉 DeFi Newsletter - Setup Completado![/bold green]\n"
+        "[bold green]🎉 DeFi Monitor - Setup Completado![/bold green]\n"
         "[dim]Todos los sistemas operacionales - Listo para producción[/dim]",
         border_style="green",
         box=box.DOUBLE
@@ -62,7 +62,7 @@ def show_summary():
         ("test_jira_connection.py", "✅ Probado", "Diagnosticar conexión"),
         ("update_jira_token.py", "✅ Listo", "Actualizar token Jira"),
         ("collect_defi_data.py", "✅ Probado", "Recopilar datos DeFi"),
-        ("generate_newsletter.py", "✅ Probado", "Generar newsletter"),
+        ("generate_dashboard.py", "✅ Probado", "Generar newsletter"),
         ("send_to_beehiiv.py", "⏳ Pendiente", "Requiere cuenta Beehiiv"),
     ]
     

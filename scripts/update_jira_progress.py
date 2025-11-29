@@ -125,7 +125,7 @@ Próximo paso: Crear cuenta en Substack.com
 Scripts probados y funcionando:
 
 ✅ collect_defi_data.py - Recopila datos DeFi (PROBADO)
-✅ generate_newsletter.py - Genera newsletter (PROBADO)
+✅ generate_dashboard.py - Genera newsletter (PROBADO)
 ✅ jira_integration.py - Crea issues (PROBADO)
 ✅ test_jira_connection.py - Diagnóstico (PROBADO)
 ✅ publish_to_substack.py - Helper para Substack (NUEVO)

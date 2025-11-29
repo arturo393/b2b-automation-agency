@@ -1,35 +1,44 @@
-# 💰 Estrategia de Monetización
+# 💰 Plan de Monetización - DeFi Monitor
 
-Plan detallado para generar ingresos con tu newsletter DeFi.
+## 📊 Modelo de Negocio
 
-## 💸 Fuentes de Ingreso
+### Plans y Pricing
 
-### 1. Enlaces de Afiliados (30-40% de ingresos)
-- Binance: 20-40% comisión
-- Coinbase: $10 por referido
-- Aave, Uniswap, etc.
+| Plan | Precio | Features |
+|------|--------|----------|
+| **Free** | $0/mes | Dashboard público, datos cada 6h, sin alertas |
+| **Pro** | $15/mes | Alertas email, datos cada 1h, históricos 30 días |
+| **Enterprise** | $50/mes | API access, webhooks, históricos ilimitados |
 
-### 2. Sponsors (40-50% de ingresos)
-- Bronze: $200
-- Silver: $500
-- Gold: $1,500
+## 🎯 Proyecciones
 
-### 3. Productos Digitales (20-30% de ingresos)
-- Ebook: $19-29
-- Curso: $49-99
-- Membresía: $9.99/mes
+### Año 1
+- Q1: 10 suscriptores ($150 MRR)
+- Q2: 20 suscriptores ($400 MRR)
+- Q3: 50 suscriptores ($1000 MRR)
+- Q4: 100 suscriptores ($2000 MRR)
 
-## 📊 Proyección de Ingresos (6 meses)
+### Costos Estimados
+- Hosting: $20/mes (Railway)
+- Twilio SMS: $10/mes
+- SendGrid: $15/mes
+- **Total:** $45/mes
 
-| Mes | Suscriptores | Total Ingresos |
-|-----|-------------|----------------|
-| 1   | 50          | $0             |
-| 2   | 150         | $50            |
-| 3   | 500         | $200           |
-| 4   | 1,000       | $700           |
-| 5   | 2,500       | $1,500         |
-| 6   | 5,000       | $2,800         |
+### Break-even: 3 suscriptores Pro
 
----
+## 💡 Value Proposition
 
-**Última actualización:** 2024-11-02
+**Para traders DeFi:**
+- Ahorra 2h/día de research manual
+- No pierdas yields altos (>50%)
+- Históricos para backtesting
+
+**ROI:** Un solo yield alto detectado paga 12 meses de suscripción
+
+## 🚀 Estrategia de Lanzamiento
+
+1. Beta gratuito (2 meses)
+2. Trial de 14 días
+3. Launch en Twitter/Reddit
+4. Programa de afiliados (20% comisión)
+

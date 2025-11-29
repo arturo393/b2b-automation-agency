@@ -121,7 +121,7 @@ def main():
         },
         {
             "summary": "Test automation scripts",
-            "description": "Probar los scripts de collect_defi_data.py y generate_newsletter.py. Asegurar que funcionan correctamente antes de automatizar.",
+            "description": "Probar los scripts de collect_defi_data.py y generate_dashboard.py. Asegurar que funcionan correctamente antes de automatizar.",
             "story_points": 3,
             "labels": ["automation", "testing"]
         },
