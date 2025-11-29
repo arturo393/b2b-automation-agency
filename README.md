@@ -36,6 +36,12 @@ defi-monitor/
 ├── .github/
 │   └── workflows/
 │       └── monitor-dashboard.yml    # Automation (cada 6h)
+
+## Modo Silencioso
+- Sin notificaciones externas: no Email/SMS.
+- Genera solo logs y `data/dashboard.json`.
+- `JIRA_PROJECT_KEY=DM` y `DATABASE_URL` son opcionales para integraciones.
+
 ├── scripts/
 │   ├── collect_defi_data.py         # Fetch datos DeFi Llama
 │   ├── generate_dashboard.py        # Generar JSON dashboard
