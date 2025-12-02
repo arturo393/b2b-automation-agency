@@ -7,135 +7,151 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            line-height: 1.8;
-            color: #2c2c2c;
-            max-width: 900px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.5;
+            color: #1a1a1a;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 60px 40px;
-            background: #ffffff;
+            padding: 40px 30px;
+            background: #fafafa;
         }
         header {
-            border-bottom: 3px solid #1a1a1a;
-            padding-bottom: 40px;
-            margin-bottom: 60px;
+            border-bottom: 2px solid #0066cc;
+            padding-bottom: 20px;
+            margin-bottom: 36px;
         }
         h1 { 
-            font-size: 2.8em; 
-            margin-bottom: 8px; 
-            font-weight: 400;
+            font-size: 2.2em; 
+            margin-bottom: 6px; 
+            font-weight: 600;
             color: #1a1a1a;
-            letter-spacing: -0.03em;
+            letter-spacing: -0.02em;
         }
         .tagline { 
-            font-size: 1.1em; 
-            color: #4a4a4a;
+            font-size: 1em; 
+            color: #666;
             font-weight: 400;
-            font-style: italic;
-            margin-top: 12px;
+            margin-top: 8px;
         }
         .section {
-            margin-bottom: 60px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 36px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #e5e5e5;
         }
         .section:last-of-type {
             border-bottom: none;
         }
         h2 {
-            color: #1a1a1a;
-            margin-bottom: 24px;
-            font-weight: 400;
-            font-size: 1.8em;
-            letter-spacing: -0.02em;
+            color: #0066cc;
+            margin-bottom: 16px;
+            font-weight: 600;
+            font-size: 1.3em;
+            letter-spacing: -0.01em;
+        }
+        .intro {
+            color: #333;
+            font-size: 1.05em;
+            line-height: 1.6;
         }
         .project {
-            margin-bottom: 36px;
-            padding-left: 20px;
-            border-left: 2px solid #1a1a1a;
+            margin-bottom: 20px;
+            padding: 16px;
+            background: #fff;
+            border-left: 3px solid #0066cc;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
         }
         .project h3 { 
             color: #1a1a1a; 
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             font-weight: 600;
-            font-size: 1.2em;
+            font-size: 1.05em;
         }
         .project p { 
-            color: #4a4a4a; 
-            margin: 10px 0; 
-            line-height: 1.7;
+            color: #555; 
+            margin: 6px 0; 
+            line-height: 1.5;
+            font-size: 0.95em;
         }
         .service {
-            margin: 24px 0;
-            padding: 24px;
-            background: #f8f8f8;
-            border-left: 3px solid #1a1a1a;
+            margin: 12px 0;
+            padding: 14px 16px;
+            background: #fff;
+            border-left: 3px solid #00aa44;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
         }
         .service h4 { 
             color: #1a1a1a; 
-            margin-bottom: 10px;
+            margin-bottom: 6px;
             font-weight: 600;
-            font-size: 1.1em;
+            font-size: 1em;
         }
         .service p {
-            color: #4a4a4a;
-            margin: 8px 0;
+            color: #555;
+            margin: 4px 0;
+            font-size: 0.9em;
         }
         .price { 
-            color: #1a1a1a; 
+            color: #00aa44; 
             font-weight: 700;
-            font-size: 1em;
-            margin-top: 12px;
+            font-size: 0.95em;
+            margin-top: 8px;
         }
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 20px;
+            gap: 8px;
+            margin-top: 14px;
         }
         .skill {
-            background: #2c2c2c;
-            color: #ffffff;
-            padding: 8px 16px;
-            font-size: 0.85em;
+            background: #1a1a1a;
+            color: #fff;
+            padding: 6px 12px;
+            font-size: 0.8em;
             font-weight: 500;
-            font-family: 'Courier New', monospace;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+            border-radius: 3px;
         }
         .cta {
-            background: #1a1a1a;
+            background: #0066cc;
             color: white;
-            padding: 16px 40px;
+            padding: 12px 28px;
             text-decoration: none;
             display: inline-block;
-            margin-top: 24px;
+            margin-top: 16px;
             font-weight: 600;
             transition: all 0.2s ease;
-            font-family: 'Georgia', serif;
-            letter-spacing: 0.02em;
+            border-radius: 4px;
+            font-size: 0.95em;
         }
         .cta:hover { 
-            background: #2c2c2c;
+            background: #0052a3;
+        }
+        .compact-info {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+        .compact-info > div {
+            flex: 1;
+            min-width: 200px;
         }
         footer {
             text-align: center;
-            padding: 40px 0;
-            color: #6a6a6a;
-            margin-top: 60px;
-            border-top: 1px solid #e0e0e0;
-            font-size: 0.9em;
+            padding: 24px 0;
+            color: #888;
+            margin-top: 36px;
+            border-top: 1px solid #e5e5e5;
+            font-size: 0.85em;
         }
-        ul { margin-left: 20px; margin-top: 12px; }
-        li { margin: 10px 0; color: #4a4a4a; }
-        a { color: #1a1a1a; text-decoration: underline; transition: color 0.2s; }
-        a:hover { color: #4a4a4a; }
+        a { color: #0066cc; text-decoration: none; transition: color 0.2s; }
+        a:hover { color: #0052a3; text-decoration: underline; }
         strong { color: #1a1a1a; font-weight: 600; }
         
         @media (max-width: 768px) {
-            body { padding: 40px 20px; }
-            h1 { font-size: 2.2em; }
-            h2 { font-size: 1.5em; }
+            body { padding: 30px 20px; }
+            h1 { font-size: 1.8em; }
+            h2 { font-size: 1.2em; }
+            .compact-info { flex-direction: column; gap: 12px; }
         }
     </style>
 </head>
@@ -146,48 +162,33 @@
     </header>
 
     <div class="section">
-        <h2>Overview</h2>
-        <p>I specialize in <strong>data automation</strong>, <strong>quantitative decision modeling</strong>, and <strong>CI/CD pipelines</strong> for data-intensive applications.</p>
-        <p style="margin-top: 16px;">Fast delivery. Clear scope. Production-ready code. Focus on <strong>DeFi/finance</strong>, <strong>automation</strong>, and <strong>decision analysis</strong>.</p>
-    </div>
-
-    <div class="section">
-        <h2>Technical Stack</h2>
+        <p class="intro">Data automation, quantitative decision modeling, and CI/CD pipelines for finance/DeFi applications. Fast delivery · Clear scope · Production-ready code.</p>
         <div class="skills">
             <span class="skill">Python</span>
             <span class="skill">C++17</span>
             <span class="skill">GitHub Actions</span>
-            <span class="skill">Bash</span>
-            <span class="skill">Data Pipelines</span>
-            <span class="skill">REST APIs</span>
+            <span class="skill">APIs</span>
             <span class="skill">Monte Carlo</span>
-            <span class="skill">TOPSIS</span>
-            <span class="skill">Git</span>
             <span class="skill">CI/CD</span>
         </div>
     </div>
 
     <div class="section">
-        <h2>Selected Work</h2>
+        <h2>Work</h2>
         
         <div class="project">
             <h3>Decision-Maker Framework</h3>
-            <p><strong>Stack:</strong> C++17, Monte Carlo, TOPSIS, Pareto, Bayesian Networks</p>
-            <p>Quantitative decision framework with 13 methodologies: Monte Carlo simulation, TOPSIS, Pareto analysis, Decision trees, Sensitivity analysis, Bayesian networks, Regret analysis, Real options, Multi-Armed Bandit, Portfolio optimization, VaR/CVaR, Scenario analysis, Correlation modeling.</p>
-            <p><strong>Outcome:</strong> Reusable framework with comprehensive documentation and executable examples.</p>
+            <p>C++17 quantitative framework with 13 methodologies: Monte Carlo, TOPSIS, Pareto, Bayesian, VaR/CVaR, Real Options. Reusable with full documentation.</p>
         </div>
 
         <div class="project">
             <h3>DeFi Monitor</h3>
-            <p><strong>Stack:</strong> Python, DeFi Llama API, GitHub Actions, JSON</p>
-            <p>Automated yield monitoring system: data collection every 6h, JSON dashboard, alert system for APY > 50%, historical data versioned in Git.</p>
-            <p><strong>Roadmap:</strong> SMTP/Twilio alerts, REST API, Stripe integration for monetization.</p>
+            <p>Automated yield tracker: Python + DeFi Llama API + GitHub Actions. Data collection every 6h, alerts for APY > 50%, Git versioning.</p>
         </div>
 
         <div class="project">
             <h3>Business Simulations</h3>
-            <p><strong>Stack:</strong> Monte Carlo, Multi-criteria analysis, Probabilistic modeling</p>
-            <p>Quantitative models with weighted factors. Recommendations from multiple perspectives: risk, regret, real option value, sensitivity.</p>
+            <p>Monte Carlo models with weighted factors. Multi-perspective recommendations: risk, regret, real option value, sensitivity.</p>
         </div>
     </div>
 
@@ -196,50 +197,48 @@
         
         <div class="service">
             <h4>DeFi Dashboard + Alerts</h4>
-            <p>DeFi Llama integration → JSON/CSV → automated alerts every 6h</p>
-            <p class="price">$250 (3 days) / $400 (48h express)</p>
+            <p>API integration → automated alerts every 6h</p>
+            <p class="price">$250 (3d) / $400 (48h)</p>
         </div>
 
         <div class="service">
-            <h4>CI/CD + Monitoring for Data Pipelines</h4>
-            <p>GitHub Actions (tests, build, schedule) + failure alerts</p>
-            <p class="price">$300 (4 days) + $150/mo retainer</p>
+            <h4>CI/CD + Monitoring</h4>
+            <p>GitHub Actions (tests, build, schedule) + alerts</p>
+            <p class="price">$300 (4d) + $150/mo</p>
         </div>
 
         <div class="service">
-            <h4>Decision Simulator (Monte Carlo)</h4>
-            <p>Model 3-5 alternatives + weighted factors + recommendation report</p>
-            <p class="price">$450 (5 days)</p>
+            <h4>Decision Simulator</h4>
+            <p>Monte Carlo: 3-5 alternatives + report</p>
+            <p class="price">$450 (5d)</p>
         </div>
 
         <div class="service">
             <h4>Data API (MVP)</h4>
-            <p>Endpoints /metrics, /protocols, /alerts + authentication + deployment</p>
-            <p class="price">$900 (7-10 days)</p>
+            <p>Endpoints + auth + deployment</p>
+            <p class="price">$900 (7-10d)</p>
         </div>
 
         <div class="service">
-            <h4>Project Audit (2 hours)</h4>
-            <p>Architecture, CI, security review + recommendations in 24h</p>
-            <p class="price">$120 (call + report)</p>
+            <h4>Project Audit</h4>
+            <p>Architecture, CI, security review</p>
+            <p class="price">$120 (2h + report)</p>
         </div>
-    </div>
-
-    <div class="section">
-        <h2>Availability</h2>
-        <p><strong>Capacity:</strong> 5-10 hours/week (part-time)</p>
-        <p><strong>Rate:</strong> $25/hour (fixed packages available)</p>
-        <p><strong>Languages:</strong> English, Spanish</p>
     </div>
 
     <div class="section">
         <h2>Contact</h2>
-        <p>Need to automate data, build a dashboard, or model complex decisions?</p>
-        <p>I can send you a <strong>working demo in 48 hours</strong> to align on scope and deliverables.</p>
-        <a href="mailto:tu-email@example.com" class="cta">Get in touch</a>
-        <div style="margin-top: 24px;">
-            <p><strong>GitHub:</strong> <a href="https://github.com/arturo393" target="_blank">github.com/arturo393</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/tu-perfil" target="_blank">linkedin.com/in/tu-perfil</a></p>
+        <div class="compact-info">
+            <div>
+                <p><strong>Availability:</strong> 5-10h/week</p>
+                <p><strong>Rate:</strong> $25/h (packages available)</p>
+                <p><strong>Languages:</strong> English, Spanish</p>
+            </div>
+            <div>
+                <p><a href="https://github.com/arturo393" target="_blank">GitHub</a> · <a href="https://linkedin.com/in/tu-perfil" target="_blank">LinkedIn</a></p>
+                <p style="margin-top: 12px;">Working demo in 48h to align on scope.</p>
+                <a href="mailto:tu-email@example.com" class="cta">Get in touch</a>
+            </div>
         </div>
     </div>
 
