@@ -7,249 +7,245 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif;
-            line-height: 1.7;
-            color: #1a1a1a;
-            max-width: 1000px;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #2c2c2c;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 20px;
-            background: #0a0e17;
-            background-image: 
-                radial-gradient(at 20% 30%, rgba(30, 58, 138, 0.15) 0px, transparent 50%),
-                radial-gradient(at 80% 70%, rgba(59, 130, 246, 0.1) 0px, transparent 50%);
+            padding: 60px 40px;
+            background: #ffffff;
         }
         header {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: #f8fafc;
-            padding: 50px 40px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-bottom: 3px solid #1a1a1a;
+            padding-bottom: 40px;
+            margin-bottom: 60px;
         }
         h1 { 
             font-size: 2.8em; 
-            margin-bottom: 12px; 
-            font-weight: 700;
-            letter-spacing: -0.02em;
+            margin-bottom: 8px; 
+            font-weight: 400;
+            color: #1a1a1a;
+            letter-spacing: -0.03em;
         }
         .tagline { 
-            font-size: 1.15em; 
-            opacity: 0.85; 
-            color: #cbd5e1;
+            font-size: 1.1em; 
+            color: #4a4a4a;
             font-weight: 400;
+            font-style: italic;
+            margin-top: 12px;
         }
         .section {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            padding: 35px;
-            margin-bottom: 24px;
-            border-radius: 12px;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(148, 163, 184, 0.1);
-            color: #e2e8f0;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .section:last-of-type {
+            border-bottom: none;
         }
         h2 {
-            color: #60a5fa;
-            margin-bottom: 20px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid rgba(96, 165, 250, 0.3);
-            font-weight: 600;
-            font-size: 1.6em;
-            letter-spacing: -0.01em;
+            color: #1a1a1a;
+            margin-bottom: 24px;
+            font-weight: 400;
+            font-size: 1.8em;
+            letter-spacing: -0.02em;
         }
         .project {
-            margin-bottom: 28px;
-            padding: 20px;
-            background: rgba(15, 23, 42, 0.6);
-            border-radius: 10px;
-            border-left: 4px solid #3b82f6;
-            backdrop-filter: blur(10px);
+            margin-bottom: 36px;
+            padding-left: 20px;
+            border-left: 2px solid #1a1a1a;
         }
         .project h3 { 
-            color: #f1f5f9; 
-            margin-bottom: 10px;
+            color: #1a1a1a; 
+            margin-bottom: 12px;
             font-weight: 600;
+            font-size: 1.2em;
         }
         .project p { 
-            color: #cbd5e1; 
-            margin: 6px 0; 
-            line-height: 1.6;
+            color: #4a4a4a; 
+            margin: 10px 0; 
+            line-height: 1.7;
         }
         .service {
-            background: rgba(30, 58, 138, 0.15);
-            padding: 20px;
-            margin: 12px 0;
-            border-radius: 10px;
-            border-left: 4px solid #2563eb;
-            backdrop-filter: blur(10px);
+            margin: 24px 0;
+            padding: 24px;
+            background: #f8f8f8;
+            border-left: 3px solid #1a1a1a;
         }
         .service h4 { 
-            color: #60a5fa; 
-            margin-bottom: 8px;
+            color: #1a1a1a; 
+            margin-bottom: 10px;
             font-weight: 600;
+            font-size: 1.1em;
+        }
+        .service p {
+            color: #4a4a4a;
+            margin: 8px 0;
         }
         .price { 
-            color: #10b981; 
+            color: #1a1a1a; 
             font-weight: 700;
-            font-size: 1.05em;
+            font-size: 1em;
+            margin-top: 12px;
         }
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 18px;
+            gap: 10px;
+            margin-top: 20px;
         }
         .skill {
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-            color: #e0e7ff;
-            padding: 10px 18px;
-            border-radius: 8px;
-            font-size: 0.9em;
+            background: #2c2c2c;
+            color: #ffffff;
+            padding: 8px 16px;
+            font-size: 0.85em;
             font-weight: 500;
-            border: 1px solid rgba(96, 165, 250, 0.2);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
         .cta {
-            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            background: #1a1a1a;
             color: white;
-            padding: 16px 36px;
+            padding: 16px 40px;
             text-decoration: none;
-            border-radius: 10px;
             display: inline-block;
             margin-top: 24px;
             font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4);
-            border: 1px solid rgba(96, 165, 250, 0.3);
+            transition: all 0.2s ease;
+            font-family: 'Georgia', serif;
+            letter-spacing: 0.02em;
         }
         .cta:hover { 
-            background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
-            box-shadow: 0 6px 24px rgba(37, 99, 235, 0.6);
-            transform: translateY(-2px);
+            background: #2c2c2c;
         }
         footer {
             text-align: center;
-            padding: 30px;
-            color: #94a3b8;
-            margin-top: 40px;
-            border-top: 1px solid rgba(148, 163, 184, 0.1);
+            padding: 40px 0;
+            color: #6a6a6a;
+            margin-top: 60px;
+            border-top: 1px solid #e0e0e0;
+            font-size: 0.9em;
         }
         ul { margin-left: 20px; margin-top: 12px; }
-        li { margin: 8px 0; color: #cbd5e1; }
-        a { color: #60a5fa; text-decoration: none; transition: color 0.2s; }
-        a:hover { color: #93c5fd; }
-        strong { color: #f1f5f9; font-weight: 600; }
+        li { margin: 10px 0; color: #4a4a4a; }
+        a { color: #1a1a1a; text-decoration: underline; transition: color 0.2s; }
+        a:hover { color: #4a4a4a; }
+        strong { color: #1a1a1a; font-weight: 600; }
+        
+        @media (max-width: 768px) {
+            body { padding: 40px 20px; }
+            h1 { font-size: 2.2em; }
+            h2 { font-size: 1.5em; }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>👨‍💻 Arturo</h1>
-        <p class="tagline">Data & Automation Engineer | Dashboards DeFi | CI/CD | Decision Modeling</p>
+        <h1>Arturo</h1>
+        <p class="tagline">Data & Automation Engineer</p>
     </header>
 
     <div class="section">
-        <h2>🎯 Qué Hago</h2>
-        <p>Ayudo a equipos a <strong>automatizar datos</strong>, crear <strong>dashboards accionables</strong> y construir <strong>herramientas de decisión cuantitativas</strong>.</p>
-        <p style="margin-top: 10px;">Entrega rápida, alcance claro, código limpio. Especializado en <strong>DeFi/finanzas</strong>, <strong>CI/CD</strong> y <strong>análisis de decisiones</strong>.</p>
+        <h2>Overview</h2>
+        <p>I specialize in <strong>data automation</strong>, <strong>quantitative decision modeling</strong>, and <strong>CI/CD pipelines</strong> for data-intensive applications.</p>
+        <p style="margin-top: 16px;">Fast delivery. Clear scope. Production-ready code. Focus on <strong>DeFi/finance</strong>, <strong>automation</strong>, and <strong>decision analysis</strong>.</p>
     </div>
 
     <div class="section">
-        <h2>🛠️ Skills</h2>
+        <h2>Technical Stack</h2>
         <div class="skills">
             <span class="skill">Python</span>
-            <span class="skill">FastAPI</span>
-            <span class="skill">GitHub Actions</span>
             <span class="skill">C++17</span>
+            <span class="skill">GitHub Actions</span>
             <span class="skill">Bash</span>
             <span class="skill">Data Pipelines</span>
-            <span class="skill">APIs</span>
+            <span class="skill">REST APIs</span>
             <span class="skill">Monte Carlo</span>
             <span class="skill">TOPSIS</span>
-            <span class="skill">Jira</span>
             <span class="skill">Git</span>
             <span class="skill">CI/CD</span>
         </div>
     </div>
 
     <div class="section">
-        <h2>📦 Proyectos Destacados</h2>
+        <h2>Selected Work</h2>
         
         <div class="project">
-            <h3>🎲 Decision-Maker Framework</h3>
-            <p><strong>Tecnologías:</strong> C++17, Monte Carlo, TOPSIS, Pareto, Bayesian Networks</p>
-            <p>Framework con 13 metodologías de análisis de decisiones: Monte Carlo, TOPSIS, Pareto, Árboles de decisión, Sensibilidad, Bayesian, Análisis de arrepentimiento, Opciones reales, Multi-Armed Bandit, Optimización de portafolio, VaR/CVaR, Escenarios y Correlaciones.</p>
-            <p><strong>Resultado:</strong> Framework reutilizable con documentación completa y ejemplos ejecutables.</p>
+            <h3>Decision-Maker Framework</h3>
+            <p><strong>Stack:</strong> C++17, Monte Carlo, TOPSIS, Pareto, Bayesian Networks</p>
+            <p>Quantitative decision framework with 13 methodologies: Monte Carlo simulation, TOPSIS, Pareto analysis, Decision trees, Sensitivity analysis, Bayesian networks, Regret analysis, Real options, Multi-Armed Bandit, Portfolio optimization, VaR/CVaR, Scenario analysis, Correlation modeling.</p>
+            <p><strong>Outcome:</strong> Reusable framework with comprehensive documentation and executable examples.</p>
         </div>
 
         <div class="project">
-            <h3>📊 DeFi Monitor</h3>
-            <p><strong>Tecnologías:</strong> Python, DeFi Llama API, GitHub Actions, JSON</p>
-            <p>Sistema automatizado de monitoreo de yields DeFi: recolección de datos cada 6h, dashboard JSON, sistema de alertas para APY > 50%, histórico de datos en Git.</p>
-            <p><strong>Roadmap:</strong> Alertas SMTP/Twilio, API FastAPI, integración Stripe para monetización.</p>
+            <h3>DeFi Monitor</h3>
+            <p><strong>Stack:</strong> Python, DeFi Llama API, GitHub Actions, JSON</p>
+            <p>Automated yield monitoring system: data collection every 6h, JSON dashboard, alert system for APY > 50%, historical data versioned in Git.</p>
+            <p><strong>Roadmap:</strong> SMTP/Twilio alerts, REST API, Stripe integration for monetization.</p>
         </div>
 
         <div class="project">
-            <h3>🔬 Simulaciones de Negocio</h3>
-            <p><strong>Tecnologías:</strong> Monte Carlo, análisis multi-criterio, modelado probabilístico</p>
-            <p>Modelos cuantitativos con múltiples factores y ponderaciones. Recomendaciones desde múltiples perspectivas: riesgo, arrepentimiento, valor de opción real, sensibilidad.</p>
+            <h3>Business Simulations</h3>
+            <p><strong>Stack:</strong> Monte Carlo, Multi-criteria analysis, Probabilistic modeling</p>
+            <p>Quantitative models with weighted factors. Recommendations from multiple perspectives: risk, regret, real option value, sensitivity.</p>
         </div>
     </div>
 
     <div class="section">
-        <h2>💼 Servicios (Paquetes Fijos)</h2>
+        <h2>Services</h2>
         
         <div class="service">
-            <h4>📊 Dashboard DeFi + Alertas (GitHub Actions)</h4>
-            <p>Integración DeFi Llama → JSON/CSV → alertas automáticas cada 6h</p>
-            <p class="price">$250 (3 días) / $400 (express 48h)</p>
+            <h4>DeFi Dashboard + Alerts</h4>
+            <p>DeFi Llama integration → JSON/CSV → automated alerts every 6h</p>
+            <p class="price">$250 (3 days) / $400 (48h express)</p>
         </div>
 
         <div class="service">
-            <h4>🤖 CI/CD + Monitoreo para Data Pipelines</h4>
-            <p>GitHub Actions (tests, build, schedule) + alertas en fallos</p>
-            <p class="price">$300 (4 días) + Retainer $150/mes</p>
+            <h4>CI/CD + Monitoring for Data Pipelines</h4>
+            <p>GitHub Actions (tests, build, schedule) + failure alerts</p>
+            <p class="price">$300 (4 days) + $150/mo retainer</p>
         </div>
 
         <div class="service">
-            <h4>🎲 Simulador de Decisiones (Monte Carlo)</h4>
-            <p>Modelar 3-5 alternativas + factores ponderados + informe con recomendación</p>
-            <p class="price">$450 (5 días)</p>
+            <h4>Decision Simulator (Monte Carlo)</h4>
+            <p>Model 3-5 alternatives + weighted factors + recommendation report</p>
+            <p class="price">$450 (5 days)</p>
         </div>
 
         <div class="service">
-            <h4>⚡ API de Datos con FastAPI (MVP)</h4>
-            <p>Endpoints /metrics, /protocols, /alerts + autenticación + deploy</p>
-            <p class="price">$900 (7-10 días)</p>
+            <h4>Data API (MVP)</h4>
+            <p>Endpoints /metrics, /protocols, /alerts + authentication + deployment</p>
+            <p class="price">$900 (7-10 days)</p>
         </div>
 
         <div class="service">
-            <h4>🔍 Auditoría de Proyecto (2 horas)</h4>
-            <p>Revisión de arquitectura, CI, seguridad + recomendaciones en 24h</p>
-            <p class="price">$120 (call + reporte)</p>
+            <h4>Project Audit (2 hours)</h4>
+            <p>Architecture, CI, security review + recommendations in 24h</p>
+            <p class="price">$120 (call + report)</p>
         </div>
     </div>
 
     <div class="section">
-        <h2>📅 Disponibilidad</h2>
-        <p>⏰ <strong>5-10 horas/semana</strong> (part-time)</p>
-        <p>💰 <strong>Tarifa:</strong> $25/hora (paquetes fijos disponibles)</p>
-        <p>🌍 <strong>Idiomas:</strong> Español, Inglés</p>
+        <h2>Availability</h2>
+        <p><strong>Capacity:</strong> 5-10 hours/week (part-time)</p>
+        <p><strong>Rate:</strong> $25/hour (fixed packages available)</p>
+        <p><strong>Languages:</strong> English, Spanish</p>
     </div>
 
     <div class="section">
-        <h2>📧 Contacto</h2>
-        <p>¿Necesitas automatizar datos, crear un dashboard o modelar decisiones complejas?</p>
-        <p>Puedo enviarte un <strong>demo en 48 horas</strong> para ajustar alcance y entregables.</p>
-        <a href="mailto:tu-email@example.com" class="cta">📨 Contáctame</a>
-        <div style="margin-top: 20px;">
+        <h2>Contact</h2>
+        <p>Need to automate data, build a dashboard, or model complex decisions?</p>
+        <p>I can send you a <strong>working demo in 48 hours</strong> to align on scope and deliverables.</p>
+        <a href="mailto:tu-email@example.com" class="cta">Get in touch</a>
+        <div style="margin-top: 24px;">
             <p><strong>GitHub:</strong> <a href="https://github.com/arturo393" target="_blank">github.com/arturo393</a></p>
             <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/tu-perfil" target="_blank">linkedin.com/in/tu-perfil</a></p>
         </div>
     </div>
 
     <footer>
-        <p>© 2025 Arturo - Data & Automation Engineer</p>
-        <p>Fast delivery • Clear scope • Clean code</p>
+        <p>© 2025 Arturo — Data & Automation Engineer</p>
+        <p>Fast delivery · Clear scope · Production-ready code</p>
     </footer>
 </body>
 </html>
