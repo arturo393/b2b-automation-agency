@@ -8,34 +8,33 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.5;
+            line-height: 1.4;
             color: #1a1a1a;
-            max-width: 800px;
+            max-width: 720px;
             margin: 0 auto;
-            padding: 40px 30px;
+            padding: 24px 24px;
             background: #fafafa;
+            font-size: 15px;
         }
         header {
             border-bottom: 2px solid #0066cc;
-            padding-bottom: 20px;
-            margin-bottom: 36px;
+            padding-bottom: 12px;
+            margin-bottom: 24px;
         }
         h1 { 
-            font-size: 2.2em; 
-            margin-bottom: 6px; 
+            font-size: 1.8em; 
+            margin-bottom: 4px; 
             font-weight: 600;
             color: #1a1a1a;
-            letter-spacing: -0.02em;
         }
         .tagline { 
-            font-size: 1em; 
+            font-size: 0.9em; 
             color: #666;
-            font-weight: 400;
-            margin-top: 8px;
+            margin-top: 4px;
         }
         .section {
-            margin-bottom: 36px;
-            padding-bottom: 24px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
             border-bottom: 1px solid #e5e5e5;
         }
         .section:last-of-type {
@@ -43,115 +42,108 @@
         }
         h2 {
             color: #0066cc;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             font-weight: 600;
-            font-size: 1.3em;
-            letter-spacing: -0.01em;
+            font-size: 1.15em;
         }
         .intro {
             color: #333;
-            font-size: 1.05em;
-            line-height: 1.6;
+            font-size: 0.95em;
+            line-height: 1.5;
         }
         .project {
-            margin-bottom: 20px;
-            padding: 16px;
+            margin-bottom: 12px;
+            padding: 10px 12px;
             background: #fff;
             border-left: 3px solid #0066cc;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
         }
         .project h3 { 
             color: #1a1a1a; 
-            margin-bottom: 8px;
+            margin-bottom: 4px;
             font-weight: 600;
-            font-size: 1.05em;
+            font-size: 0.95em;
         }
         .project p { 
             color: #555; 
-            margin: 6px 0; 
-            line-height: 1.5;
-            font-size: 0.95em;
+            margin: 3px 0; 
+            line-height: 1.4;
+            font-size: 0.85em;
         }
         .service {
-            margin: 12px 0;
-            padding: 14px 16px;
+            margin: 8px 0;
+            padding: 10px 12px;
             background: #fff;
             border-left: 3px solid #00aa44;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
         }
         .service h4 { 
             color: #1a1a1a; 
-            margin-bottom: 6px;
             font-weight: 600;
-            font-size: 1em;
-        }
-        .service p {
-            color: #555;
-            margin: 4px 0;
             font-size: 0.9em;
+            flex: 1;
         }
         .price { 
             color: #00aa44; 
             font-weight: 700;
-            font-size: 0.95em;
-            margin-top: 8px;
+            font-size: 0.85em;
+            white-space: nowrap;
         }
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 14px;
+            gap: 6px;
+            margin-top: 10px;
         }
         .skill {
             background: #1a1a1a;
             color: #fff;
-            padding: 6px 12px;
-            font-size: 0.8em;
+            padding: 4px 10px;
+            font-size: 0.75em;
             font-weight: 500;
             border-radius: 3px;
         }
         .cta {
             background: #0066cc;
             color: white;
-            padding: 12px 28px;
+            padding: 10px 24px;
             text-decoration: none;
             display: inline-block;
-            margin-top: 16px;
+            margin-top: 10px;
             font-weight: 600;
             transition: all 0.2s ease;
             border-radius: 4px;
-            font-size: 0.95em;
+            font-size: 0.9em;
         }
         .cta:hover { 
             background: #0052a3;
         }
         .compact-info {
-            display: flex;
-            gap: 24px;
-            flex-wrap: wrap;
-            margin-top: 12px;
-        }
-        .compact-info > div {
-            flex: 1;
-            min-width: 200px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 8px;
+            font-size: 0.9em;
         }
         footer {
             text-align: center;
-            padding: 24px 0;
+            padding: 16px 0;
             color: #888;
-            margin-top: 36px;
+            margin-top: 24px;
             border-top: 1px solid #e5e5e5;
-            font-size: 0.85em;
+            font-size: 0.8em;
         }
-        a { color: #0066cc; text-decoration: none; transition: color 0.2s; }
+        a { color: #0066cc; text-decoration: none; }
         a:hover { color: #0052a3; text-decoration: underline; }
         strong { color: #1a1a1a; font-weight: 600; }
         
         @media (max-width: 768px) {
-            body { padding: 30px 20px; }
-            h1 { font-size: 1.8em; }
-            h2 { font-size: 1.2em; }
-            .compact-info { flex-direction: column; gap: 12px; }
+            body { padding: 20px 16px; font-size: 14px; }
+            h1 { font-size: 1.6em; }
+            .compact-info { grid-template-columns: 1fr; gap: 10px; }
+            .service { flex-direction: column; align-items: flex-start; }
         }
     </style>
 </head>
@@ -197,32 +189,27 @@
         
         <div class="service">
             <h4>DeFi Dashboard + Alerts</h4>
-            <p>API integration → automated alerts every 6h</p>
-            <p class="price">$250 (3d) / $400 (48h)</p>
+            <span class="price">$250 (3d)</span>
         </div>
 
         <div class="service">
             <h4>CI/CD + Monitoring</h4>
-            <p>GitHub Actions (tests, build, schedule) + alerts</p>
-            <p class="price">$300 (4d) + $150/mo</p>
+            <span class="price">$300 (4d)</span>
         </div>
 
         <div class="service">
-            <h4>Decision Simulator</h4>
-            <p>Monte Carlo: 3-5 alternatives + report</p>
-            <p class="price">$450 (5d)</p>
+            <h4>Decision Simulator (Monte Carlo)</h4>
+            <span class="price">$450 (5d)</span>
         </div>
 
         <div class="service">
             <h4>Data API (MVP)</h4>
-            <p>Endpoints + auth + deployment</p>
-            <p class="price">$900 (7-10d)</p>
+            <span class="price">$900 (7-10d)</span>
         </div>
 
         <div class="service">
-            <h4>Project Audit</h4>
-            <p>Architecture, CI, security review</p>
-            <p class="price">$120 (2h + report)</p>
+            <h4>Project Audit (2h)</h4>
+            <span class="price">$120</span>
         </div>
     </div>
 
