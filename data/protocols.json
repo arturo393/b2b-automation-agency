@@ -1,75 +1,75 @@
 {
-  "last_updated": "2025-11-28T19:43:49.723403",
+  "last_updated": "2025-12-01T22:31:12.751728",
   "protocols": [
     {
       "name": "Binance CEX",
-      "tvl": 171599131503.05206,
+      "tvl": 162523959650.33145,
       "chain": "Multi-Chain",
       "category": "CEX",
-      "change_1d": -0.5392219539421745
+      "change_1d": -4.196357868206704
     },
     {
       "name": "Aave V3",
-      "tvl": 32558615893.754025,
+      "tvl": 30839509575.8543,
       "chain": "Multi-Chain",
       "category": "Lending",
-      "change_1d": 0.7881322940102677
+      "change_1d": -3.463247601799452
     },
     {
       "name": "Lido",
-      "tvl": 26231010798.6357,
+      "tvl": 24184394859.276756,
       "chain": "Multi-Chain",
       "category": "Liquid Staking",
-      "change_1d": 0.12357485721506123
+      "change_1d": -6.221980250310949
     },
     {
       "name": "OKX",
-      "tvl": 23515478611.825016,
+      "tvl": 22377318822.72254,
       "chain": "Multi-Chain",
       "category": "CEX",
-      "change_1d": -1.0829525477439148
+      "change_1d": -3.5814662636689576
     },
     {
       "name": "Bitfinex",
-      "tvl": 21529611296.22841,
+      "tvl": 20759088607.914993,
       "chain": "Multi-Chain",
       "category": "CEX",
-      "change_1d": 0.059252139195990594
+      "change_1d": -3.911314930447432
     },
     {
       "name": "Bybit",
-      "tvl": 19767083572.661915,
+      "tvl": 18825681203.776127,
       "chain": "Multi-Chain",
       "category": "CEX",
-      "change_1d": -0.12625757188760645
+      "change_1d": -4.383015845641367
     },
     {
       "name": "Robinhood",
-      "tvl": 16948740572.89263,
+      "tvl": 15897798366.203625,
       "chain": "Multi-Chain",
       "category": "CEX",
-      "change_1d": -0.27920671622362647
+      "change_1d": -4.00336387310432
     },
     {
       "name": "EigenLayer",
-      "tvl": 12400316325.060347,
+      "tvl": 11352989461.413776,
       "chain": "Ethereum",
       "category": "Restaking",
-      "change_1d": -0.15960580478537167
+      "change_1d": -6.802700198612115
     },
     {
       "name": "WBTC",
-      "tvl": 11300661782.169724,
+      "tvl": 10678901318.863554,
       "chain": "Bitcoin",
       "category": "Bridge",
-      "change_1d": -0.07238113786843314
+      "change_1d": -3.213420945974221
     },
     {
       "name": "Binance staked ETH",
-      "tvl": 10796424962.549726,
+      "tvl": 9884524317.177685,
       "chain": "Multi-Chain",
       "category": "Liquid Staking",
-      "change_1d": 0.24138843351808248
+      "change_1d": -6.547829698494752
     }
   ]
 }
