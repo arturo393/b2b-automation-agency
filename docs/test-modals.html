@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; }
+        .modal.active { display: flex; align-items: center; justify-content: center; }
+        .modal-content { background: white; padding: 40px; border-radius: 8px; }
+        .card { padding: 20px; margin: 10px; border: 1px solid #ccc; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Modal Test</h1>
+    
+    <div class="card" onclick="openModal('test')">
+        Click me to open modal
+    </div>
+
+    <div id="modal-test" class="modal" onclick="closeModal('test')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <h3>Test Modal</h3>
+            <p>If you see this, modals work!</p>
+            <button onclick="closeModal('test')">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal(type) {
+            console.log('Opening modal:', type);
+            const modal = document.getElementById('modal-' + type);
+            console.log('Modal element:', modal);
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                console.log('Modal opened successfully');
+            } else {
+                console.error('Modal not found:', 'modal-' + type);
+            }
+        }
+        
+        function closeModal(type) {
+            console.log('Closing modal:', type);
+            document.getElementById('modal-' + type).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>

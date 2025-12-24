@@ -402,39 +402,42 @@
                 <p class="modal-meta">C++17 · 13 Methodologies · Production-ready</p>
                 
                 <p style="color: #ccc; line-height: 1.6; margin-bottom: 20px;">
-                    Comprehensive decision analysis framework for evaluating business alternatives using multiple quantitative methodologies. 
-                    Example: evaluating 4 options for DeFi Monitor project with 6 weighted factors.
+                    Comprehensive C++17 framework for evaluating business alternatives using Monte Carlo, TOPSIS, Pareto, Bayesian analysis, and more.
+                    Used to make critical decisions like choosing between freelance, SaaS, or consulting.
                 </p>
                 
-                <div class="modal-demo">
-<span class="comment">// Monte Carlo Simulation (20,000 iterations)</span>
-
-RESULTS:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Option #1: Focus Freelance
-  <span class="output">Score: 67.8 | Ganancia 12m: $15,600 | Riesgo: 0.12</span>
-  Tiempo semanal: 0.5h | Users: 0 | Diferenciación: 8.2
-
-Option #2: Newsletter Premium  
-  Score: 61.2 | Ganancia 12m: $11,100 | Riesgo: 0.35
-  Tiempo semanal: 10.7h | Users: 4,200 | Diferenciación: 6.8
-
-Option #3: Open Source + Sponsors
-  Score: 58.4 | Ganancia 12m: $5,700 | Riesgo: 0.22
-  
-Option #4: DeFi Monitor SaaS
-  Score: 54.1 | Ganancia 12m: $4,900 | Riesgo: 0.41
-
-<span class="comment">// Sensitivity Analysis</span>
-Most influential: Ganancia 12m (2199.7)
-Second: Satisfacción (16.3), Riesgo (13.9)
-
-<span class="output">RECOMMENDATION: Focus Freelance ✓</span>
+                <div style="background: #0a0a0a; border: 1px solid #222; border-radius: 8px; padding: 20px; margin: 20px 0;">
+                    <h4 style="color: #0066ff; font-size: 1.1em; margin-bottom: 16px;">⚡ Key Features</h4>
+                    <ul style="color: #999; line-height: 1.8; padding-left: 20px;">
+                        <li>Monte Carlo simulation (20,000+ iterations)</li>
+                        <li>13 decision methodologies (TOPSIS, Pareto, VaR/CVaR, etc.)</li>
+                        <li>Weighted multi-criteria analysis</li>
+                        <li>Sensitivity analysis & risk scoring</li>
+                        <li>Production-ready C++17 code</li>
+                    </ul>
+                </div>
+                
+                <div style="background: #0a0a0a; border: 1px solid #222; border-radius: 8px; padding: 20px; margin: 20px 0;">
+                    <h4 style="color: #00ff88; font-size: 1.1em; margin-bottom: 16px;">📊 Sample Results</h4>
+                    <div style="color: #ccc; font-family: monospace; font-size: 0.85em; line-height: 1.6;">
+                        <p style="color: #0066ff; font-weight: 600; margin-bottom: 8px;">→ Option #1: Focus Freelance</p>
+                        <p style="margin-left: 20px;">Score: <span style="color: #00ff88;">67.8</span> | Revenue 12m: <span style="color: #00ff88;">$15,600</span> | Risk: <span style="color: #ffa500;">0.12</span></p>
+                        
+                        <p style="color: #666; font-weight: 600; margin: 16px 0 8px 0;">→ Option #2: Newsletter Premium</p>
+                        <p style="margin-left: 20px;">Score: 61.2 | Revenue 12m: $11,100 | Risk: 0.35</p>
+                        
+                        <p style="color: #666; font-weight: 600; margin: 16px 0 8px 0;">→ Option #3: Open Source + Sponsors</p>
+                        <p style="margin-left: 20px;">Score: 58.4 | Revenue 12m: $5,700 | Risk: 0.22</p>
+                        
+                        <p style="margin-top: 20px; padding: 12px; background: #111; border-left: 3px solid #00ff88; color: #00ff88;">
+                            ✓ RECOMMENDATION: Focus Freelance (highest score, best risk/reward)
+                        </p>
+                    </div>
                 </div>
                 
                 <div class="modal-links">
-                    <a href="https://github.com/arturo393/desicion-maker" target="_blank" class="modal-link">View Code →</a>
-                    <a href="#contact" class="modal-link" onclick="closeModal('decision')">Hire for Similar →</a>
+                    <a href="https://github.com/arturo393/decision-maker" target="_blank" class="modal-link">View Code on GitHub →</a>
+                    <a href="#contact" class="modal-link" onclick="closeModal('decision')">Hire Me for Similar Project →</a>
                 </div>
             </div>
         </div>
@@ -446,36 +449,42 @@ Second: Satisfacción (16.3), Riesgo (13.9)
                 <p class="modal-meta">Python · DeFi Llama API · GitHub Actions</p>
                 
                 <p style="color: #ccc; line-height: 1.6; margin-bottom: 20px;">
-                    Automated yield monitoring system that tracks top DeFi protocols every 6 hours. 
-                    Alerts when APY > 50%, stores historical data in Git for analysis.
+                    Automated system that monitors DeFi protocol yields every 6 hours via GitHub Actions. 
+                    Tracks TVL, APY, and sends alerts when interesting opportunities arise.
                 </p>
                 
-                <div class="modal-demo">
-<span class="comment"># Automated Collection (every 6h via GitHub Actions)</span>
-
-Fetching DeFi protocols...
-<span class="output">✓ Successfully fetched 10 protocols</span>
-
-TOP PROTOCOLS BY TVL:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-1. Binance CEX      <span class="output">$162.52B</span>
-2. Aave V3          <span class="output">$30.84B</span>   APY: 3.2%
-3. Lido             <span class="output">$24.18B</span>   APY: 2.8%
-4. JustLend         <span class="output">$11.61B</span>   APY: 4.1%
-5. Uniswap          <span class="output">$7.45B</span>    APY: 0.3%
-
-<span class="comment"># Alert System</span>
-⚠️  Alert: Protocol X APY jumped to 52.3%
-    Trigger: APY > 50%
-    Action: Notify via JSON + future SMTP
-
-<span class="output">✓ Data saved to data/protocols.json</span>
-<span class="output">✓ Committed to Git (auto-versioning)</span>
+                <div style="background: #0a0a0a; border: 1px solid #222; border-radius: 8px; padding: 20px; margin: 20px 0;">
+                    <h4 style="color: #0066ff; font-size: 1.1em; margin-bottom: 16px;">⚡ Tech Stack</h4>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <span style="background: #1a1a1a; padding: 6px 12px; border-radius: 4px; font-size: 0.85em; color: #999;">Python 3.11</span>
+                        <span style="background: #1a1a1a; padding: 6px 12px; border-radius: 4px; font-size: 0.85em; color: #999;">GitHub Actions</span>
+                        <span style="background: #1a1a1a; padding: 6px 12px; border-radius: 4px; font-size: 0.85em; color: #999;">DeFi Llama API</span>
+                        <span style="background: #1a1a1a; padding: 6px 12px; border-radius: 4px; font-size: 0.85em; color: #999;">JSON Storage</span>
+                        <span style="background: #1a1a1a; padding: 6px 12px; border-radius: 4px; font-size: 0.85em; color: #999;">Git Versioning</span>
+                    </div>
+                </div>
+                
+                <div style="background: #0a0a0a; border: 1px solid #222; border-radius: 8px; padding: 20px; margin: 20px 0;">
+                    <h4 style="color: #00ff88; font-size: 1.1em; margin-bottom: 16px;">📊 Sample Output</h4>
+                    <div style="color: #ccc; font-family: monospace; font-size: 0.85em; line-height: 1.8;">
+                        <p style="color: #666;">$ python collect_defi_data.py</p>
+                        <p style="color: #00ff88; margin: 8px 0;">✓ Fetched 10 protocols from DeFi Llama</p>
+                        
+                        <div style="margin: 16px 0; padding: 12px; background: #111; border-radius: 4px;">
+                            <p><span style="color: #0066ff;">1.</span> Binance CEX — TVL: <span style="color: #00ff88;">$162.5B</span></p>
+                            <p><span style="color: #0066ff;">2.</span> Aave V3 — TVL: <span style="color: #00ff88;">$30.8B</span> | APY: 3.2%</p>
+                            <p><span style="color: #0066ff;">3.</span> Lido — TVL: <span style="color: #00ff88;">$24.2B</span> | APY: 2.8%</p>
+                            <p><span style="color: #0066ff;">4.</span> JustLend — TVL: <span style="color: #00ff88;">$11.6B</span> | APY: 4.1%</p>
+                        </div>
+                        
+                        <p style="color: #ffa500; margin-top: 16px;">⚠️ Alert: Protocol X APY jumped to 52.3% (trigger: >50%)</p>
+                        <p style="color: #00ff88; margin-top: 8px;">✓ Data saved and committed to Git</p>
+                    </div>
                 </div>
                 
                 <div class="modal-links">
-                    <a href="https://github.com/arturo393/defi-monitor" target="_blank" class="modal-link">View Code →</a>
-                    <a href="#contact" class="modal-link" onclick="closeModal('defi')">Hire for Dashboard →</a>
+                    <a href="https://github.com/arturo393/defi-monitor" target="_blank" class="modal-link">View Code on GitHub →</a>
+                    <a href="#contact" class="modal-link" onclick="closeModal('defi')">Hire Me for Automation →</a>
                 </div>
             </div>
         </div>
@@ -488,38 +497,63 @@ TOP PROTOCOLS BY TVL:
                 
                 <p style="color: #ccc; line-height: 1.6; margin-bottom: 20px;">
                     Quantitative business modeling with weighted factors and probabilistic outcomes. 
-                    Multi-perspective recommendations: risk minimization, regret analysis, real options value.
+                    Generates recommendations from multiple perspectives: risk minimization, regret analysis, real options value.
                 </p>
                 
-                <div class="modal-demo">
-<span class="comment">// Business Scenario: Launch Strategy</span>
-
-FACTORS (weighted):
-• Revenue Potential     35%  →  Distribution: Triangular
-• Time Investment       15%  →  Distribution: Normal  
-• Market Risk          15%  →  Distribution: Beta
-• User Growth          15%  →  Distribution: Poisson
-• Differentiation      10%  →  Distribution: Uniform
-• Satisfaction         10%  →  Distribution: Categorical
-
-<span class="comment">// Simulation: 20,000 iterations</span>
-
-RESULTS:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-<span class="output">Risk-Minimized Choice:</span>  Option B (Risk: 0.18)
-<span class="output">Regret-Minimized:</span>      Option A (Max Regret: $2.3k)
-<span class="output">Real Option Value:</span>     Option A ($18.7k NPV + $3.2k option)
-<span class="output">Pareto Optimal:</span>        Options A, B (non-dominated)
-
-<span class="comment">// Sensitivity: Most influential factor</span>
-Revenue Potential: <span class="output">Δ2,199.7</span> (highest impact)
-
-RECOMMENDATION: <span class="output">Option A with staged rollout</span>
+                <div style="background: #0a0a0a; border: 1px solid #222; border-radius: 8px; padding: 20px; margin: 20px 0;">
+                    <h4 style="color: #0066ff; font-size: 1.1em; margin-bottom: 16px;">📊 Analysis Types</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                        <div style="background: #111; padding: 12px; border-radius: 6px;">
+                            <div style="color: #00ff88; font-weight: 600; margin-bottom: 4px;">Monte Carlo</div>
+                            <div style="color: #666; font-size: 0.85em;">20,000+ iterations</div>
+                        </div>
+                        <div style="background: #111; padding: 12px; border-radius: 6px;">
+                            <div style="color: #00ff88; font-weight: 600; margin-bottom: 4px;">TOPSIS</div>
+                            <div style="color: #666; font-size: 0.85em;">Multi-criteria ranking</div>
+                        </div>
+                        <div style="background: #111; padding: 12px; border-radius: 6px;">
+                            <div style="color: #00ff88; font-weight: 600; margin-bottom: 4px;">VaR/CVaR</div>
+                            <div style="color: #666; font-size: 0.85em;">Risk quantification</div>
+                        </div>
+                        <div style="background: #111; padding: 12px; border-radius: 6px;">
+                            <div style="color: #00ff88; font-weight: 600; margin-bottom: 4px;">Real Options</div>
+                            <div style="color: #666; font-size: 0.85em;">Flexibility value</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background: #0a0a0a; border: 1px solid #222; border-radius: 8px; padding: 20px; margin: 20px 0;">
+                    <h4 style="color: #00ff88; font-size: 1.1em; margin-bottom: 16px;">💡 Use Cases</h4>
+                    <ul style="color: #ccc; line-height: 1.8; padding-left: 20px;">
+                        <li>Launch strategy selection (MVP vs Full Product)</li>
+                        <li>Investment opportunity evaluation</li>
+                        <li>Market entry decision with uncertainty</li>
+                        <li>Technology stack comparison</li>
+                        <li>Hiring vs outsourcing analysis</li>
+                    </ul>
+                </div>
+                
+                <div style="background: #0a0a0a; border: 1px solid #222; border-radius: 8px; padding: 20px; margin: 20px 0;">
+                    <h4 style="color: #ffa500; font-size: 1.1em; margin-bottom: 12px;">🎯 Example Output</h4>
+                    <div style="color: #ccc; font-family: monospace; font-size: 0.85em;">
+                        <div style="margin-bottom: 12px;">
+                            <span style="color: #666;">Risk-Minimized:</span> <span style="color: #00ff88;">Option B</span> (Risk: 0.18)
+                        </div>
+                        <div style="margin-bottom: 12px;">
+                            <span style="color: #666;">Regret-Minimized:</span> <span style="color: #00ff88;">Option A</span> (Max Regret: $2.3k)
+                        </div>
+                        <div style="margin-bottom: 12px;">
+                            <span style="color: #666;">Real Option Value:</span> <span style="color: #00ff88;">Option A</span> ($18.7k NPV + $3.2k flexibility)
+                        </div>
+                        <div style="margin-top: 16px; padding: 12px; background: #111; border-left: 3px solid #0066ff;">
+                            <span style="color: #0066ff;">→ Pareto Optimal:</span> Options A & B (non-dominated solutions)
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="modal-links">
-                    <a href="https://github.com/arturo393/desicion-maker" target="_blank" class="modal-link">View Code →</a>
-                    <a href="#contact" class="modal-link" onclick="closeModal('simulation')">Hire for Modeling →</a>
+                    <a href="https://github.com/arturo393/decision-maker" target="_blank" class="modal-link">View Framework →</a>
+                    <a href="#contact" class="modal-link" onclick="closeModal('simulation')">Hire Me for Analysis →</a>
                 </div>
             </div>
         </div>
@@ -597,21 +631,44 @@ RECOMMENDATION: <span class="output">Option A with staged rollout</span>
 
     <script>
         function openModal(type) {
-            document.getElementById('modal-' + type).classList.add('active');
-            document.body.style.overflow = 'hidden';
+            console.log('Opening modal:', type);
+            const modal = document.getElementById('modal-' + type);
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                console.log('Modal opened successfully');
+            } else {
+                console.error('Modal not found:', 'modal-' + type);
+            }
         }
         
         function closeModal(type) {
-            document.getElementById('modal-' + type).classList.remove('active');
-            document.body.style.overflow = 'auto';
+            console.log('Closing modal:', type);
+            const modal = document.getElementById('modal-' + type);
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
         }
         
         // Close modal with Escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
-                document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
+                console.log('Escape key pressed');
+                document.querySelectorAll('.modal').forEach(m => {
+                    m.classList.remove('active');
+                });
                 document.body.style.overflow = 'auto';
             }
+        });
+        
+        // Debug: Check if all modals exist on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Page loaded. Checking modals...');
+            ['decision', 'defi', 'simulation'].forEach(type => {
+                const modal = document.getElementById('modal-' + type);
+                console.log('Modal', type, ':', modal ? 'Found ✓' : 'NOT FOUND ✗');
+            });
         });
     </script>
 </body>
