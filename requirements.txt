@@ -1,0 +1,7 @@
+google-cloud-aiplatform>=1.38.0
+google-auth
+googlesearch-python
+requests
+beautifulsoup4
+python-dotenv
+PyPDF2
