@@ -21,4 +21,4 @@ USER appuser
 
 # Entrypoint to run the Hunter
 ENTRYPOINT ["python", "-m", "agency.hunter.main"]
-CMD ["--mode=search", "--keyword='logistics companies'"]
+CMD ["--keyword=logistics companies chile", "--limit=5", "--proof"]
