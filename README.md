@@ -1,31 +1,74 @@
-# B2B Automation Agency (Powered by Vertex AI)
+# 🦁 B2B Automation Agency
 
-Transforming manual business processes into automated, intelligent pipelines.
+**Intelligent Sales Agents & Document Pipelines Powered by Gemini 2.5 Flash**
 
-## Value Proposition
-We help companies cut operational costs by deploying **Custom AI Agents** that handle:
-- 📄 Document Processing (Invoices, Contracts)
-- 📧 Lead Qualification & Outreach
-- 📊 Data Extraction & Reporting
+This repository is a fully operational Automated Sales Agency. It uses AI to solve the two biggest bottlenecks in B2B business: **Lead Generation** and **Document Backlog**.
 
-## Core Technology
-- **Engine**: Google Vertex AI + Gemini 1.5 Flash
-- **Infrastructure**: Google Cloud Functions / Cloud Run
-- **Language**: Python 3.11+
+---
 
-## Getting Started
+## 🛠 Project Structure
 
-### 1. Setup Environment
+- **`agency/`**: Core intelligence modules.
+  - **`hunter/`**: The "Hunter" sales agent. Finds, grades, and reaches out to leads.
+  - **`product/`**: The "Document Intelligence" product. Multimodal PDF/Image parsing.
+  - **`utils/`**: Shared Gemini client and helper modules.
+- **`infrastructure/`**: Terraform configurations for Cloud Run and Artifact Registry.
+- **`scripts/`**: Deployment and utility scripts.
+- **`data/`**: Results from the Hunter runs (Leads CSVs, Logs).
+- **`outbox/`**: Personalized email drafts and "Proof of Work" reports for prospects.
+- **`archive/`**: Legacy project files.
+
+---
+
+## 🚀 Key Features
+
+### 1. 🦁 The Hunter (Sales Agent)
+An autonomous agent that:
+1.  **Hunts**: Searches Google for businesses in specific niches.
+2.  **Analyzes**: "Browses" the prospect's website to understand their business.
+3.  **Grades**: Uses Gemini to score the lead based on automation potential.
+4.  **Drafts**: Composes highly personalized cold emails.
+5.  **Proves**: Generates a PDF "Proof of Work" showcasing your intelligence capabilities.
+
+### 2. 📄 Document Intelligence Pipeline
+A multimodal engine that converts unstructured documents into actionable data:
+- **Vision Support**: Parses PNGs, JPEGs, and PDFs.
+- **Structured Output**: Returns clean JSON for invoices, contracts, and POs.
+- **Cost Efficient**: Optimized for Gemini 2.5 Flash.
+
+---
+
+## ⚙️ Quick Start
+
+### 1. Setup
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
+# Clone and install
+python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
+
+# Configure environment (Gemini API Key needed)
 cp .env.example .env
 ```
 
-### 2. Run the "Hunter" (Sales Agent)
-Our internal tool to find clients automatically.
-
+### 2. Find Leads
 ```bash
-python -m agency.hunter.main --mode=search --keyword="logistics companies in Chile"
+python3 -m agency.hunter.main --keyword="logistics companies chile" --limit=3 --proof --history
+```
+
+### 3. Parse a Document
+```bash
+python3 tests/test_parser_multimodal.py
+```
+
+---
+
+## 🛡 Go-To-Market
+Check out `GO_TO_MARKET.md` for the full strategy on how to use this code to get your first paying B2B client.
+
+---
+
+## ☁️ Deployment
+Managed via Terraform. Deploy to Google Cloud Run Jobs for on-demand execution:
+```bash
+./scripts/deploy_demo.sh
 ```

@@ -124,15 +124,15 @@ class LeadHunter:
     def _mock_leads(self) -> List[Dict]:
         return [
             {
-                "url": "https://agenciaaduana-ejemplo.cl",
-                "title": "Agencia Aduana Ejemplo",
-                "description": "Tramites manuales de importacion y exportacion. Envie sus documentos por fax.",
+                "url": "https://www.ajv.cl",
+                "title": "AJV - Agencia de Aduana",
+                "description": "Agencia de aduana con servicios integrales de comercio exterior en Chile.",
                 "source": "mock",
             },
             {
-                "url": "https://logistica-tradicional.cl",
-                "title": "Logistica Tradicional Ltda",
-                "description": "Empresa de logistica con 30 años de experiencia. Gestion de documentos manual.",
+                "url": "https://www.browne.cl",
+                "title": "Browne & Cía",
+                "description": "Servicios de comercio exterior y desaduanamiento.",
                 "source": "mock",
             },
         ]

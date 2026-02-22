@@ -14,12 +14,14 @@ load_dotenv()
 from agency.hunter.lead_scraper import LeadHunter
 from agency.hunter.lead_grader import LeadGrader
 from agency.hunter.outreach_composer import OutreachComposer
+from agency.hunter.page_fetcher import PageFetcher
 from agency.product.proof_of_work import generate_proof_of_work
 
 
-def save_leads(leads: list, output_dir: str = "data"):
+def save_leads(leads: list, output_dir: str = "data", timestamp: str = None):
     Path(output_dir).mkdir(exist_ok=True)
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    if not timestamp:
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = f"{output_dir}/leads_{timestamp}.csv"
     if not leads:
         return
@@ -28,6 +30,24 @@ def save_leads(leads: list, output_dir: str = "data"):
         writer.writeheader()
         writer.writerows(leads)
     print(f"\n💾 Saved {len(leads)} leads → {filename}")
+
+
+def log_history(keyword: str, total: int, qualified: int, log_file: str = "data/logs/trading_log.csv"):
+    """Saves run summary to a cumulative log (as requested in user memories)."""
+    os.makedirs(os.path.dirname(log_file), exist_ok=True)
+    file_exists = os.path.isfile(log_file)
+    with open(log_file, "a", newline="") as f:
+        writer = csv.writer(f)
+        if not file_exists:
+            writer.writerow(["timestamp", "keyword", "total_found", "qualified", "status"])
+        writer.writerow([
+            datetime.now().isoformat(),
+            keyword,
+            total,
+            qualified,
+            "SUCCESS" if qualified > 0 else "NO_LEADS"
+        ])
+    print(f"📖 History updated in {log_file}")
 
 
 def main():
@@ -40,7 +60,11 @@ def main():
                         help="Minimum score (0-10) to qualify a lead")
     parser.add_argument("--proof", action="store_true",
                         help="Generate a Proof-of-Work report for qualified leads")
+    parser.add_argument("--history", action="store_true",
+                        help="Log the run results to central history file")
     args = parser.parse_args()
+
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
     print("\n🦁 The Hunter is waking up...")
     print(f"   Keyword : {args.keyword}")
@@ -58,19 +82,35 @@ def main():
     # 2. Grade Leads
     grader = LeadGrader()
     composer = OutreachComposer()
+    fetcher = PageFetcher()
     qualified = []
 
-    print(f"\n🧠 Grading {len(leads)} leads with Vertex AI...\n")
+    print(f"\n🧠 Processing {len(leads)} leads...\n")
     for lead in leads:
-        # In production: fetch real page text via requests + BeautifulSoup
-        page_text = lead.get("description", "") + " " + lead.get("title", "")
+        url = lead.get("url")
+        # Try to fetch real content, fallback to snippets
+        page_text = fetcher.fetch(url) if url else ""
+        
+        if not page_text or len(page_text) < 200:
+            print(f"   ℹ️  Page text too short/missing, using search snippet for: {lead.get('title')}")
+            page_text = lead.get("description", "") + " " + lead.get("title", "")
+        
         scored = grader.grade_lead(lead, page_text=page_text)
 
         if scored.get("score", 0) >= args.min_score:
             # 3. Write personalized email
             email = composer.compose_email(scored)
             scored["email_draft"] = email
-            print(f"\n📧 Email Draft:\n{'─'*50}\n{email}\n{'─'*50}")
+            
+            # Save email to a separate file for easy access
+            outbox_path = f"outbox/email_{scored.get('company_name', 'Lead').replace(' ', '_')}_{timestamp}.txt"
+            os.makedirs("outbox", exist_ok=True)
+            with open(outbox_path, "w") as f_email:
+                f_email.write(email)
+            scored["email_file"] = outbox_path
+
+            print(f"\n📧 Email Draft Saved to: {outbox_path}")
+            print(f"{'─'*50}\n{email}\n{'─'*50}")
 
             # 4. (Optional) Generate Proof of Work attachment
             if args.proof:
@@ -83,7 +123,10 @@ def main():
             print(f"   🚫 Disqualified: {name} ({scored.get('score', 0)}/10)")
 
     # 5. Save results
-    save_leads(qualified)
+    save_leads(qualified, timestamp=timestamp)
+    if args.history:
+        log_history(args.keyword, len(leads), len(qualified))
+    
     print(f"\n✅ Done. {len(qualified)}/{len(leads)} leads qualified.")
 
 

@@ -7,6 +7,8 @@ import os
 import subprocess
 import json
 import requests
+import base64
+import mimetypes
 
 _cached_key: str | None = None
 
@@ -25,7 +27,7 @@ def _get_api_key() -> str:
     try:
         name_result = subprocess.run(
             ["gcloud", "alpha", "services", "api-keys", "list",
-             "--project=gen-lang-client-0147867042",
+             "--project=tranquil-racer-438220-q4",
              "--format=value(name)"],
             capture_output=True, text=True, timeout=15
         )
@@ -59,6 +61,40 @@ def generate(prompt: str, model_name: str = "gemini-2.5-flash") -> str:
 
     if response.status_code != 200:
         raise RuntimeError(f"Gemini Error {response.status_code}: {response.text[:300]}")
+
+    return response.json()["candidates"][0]["content"]["parts"][0]["text"]
+
+
+def generate_multimodal(prompt: str, file_path: str, model_name: str = "gemini-2.5-flash") -> str:
+    """Call Gemini with a file (PDF/Image) using Base64."""
+    key = _get_api_key()
+    model_id = model_name.replace("models/", "")
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_id}:generateContent?key={key}"
+
+    with open(file_path, "rb") as f:
+        file_data = base64.b64encode(f.read()).decode("utf-8")
+
+    mime_type, _ = mimetypes.guess_type(file_path)
+    if not mime_type:
+        mime_type = "application/pdf" if file_path.endswith(".pdf") else "image/jpeg"
+
+    body = {
+        "contents": [{
+            "parts": [
+                {"text": prompt},
+                {
+                    "inline_data": {
+                        "mime_type": mime_type,
+                        "data": file_data
+                    }
+                }
+            ]
+        }]
+    }
+
+    response = requests.post(url, json=body, timeout=60)
+    if response.status_code != 200:
+        raise RuntimeError(f"Gemini Multimodal Error {response.status_code}: {response.text[:300]}")
 
     return response.json()["candidates"][0]["content"]["parts"][0]["text"]
 

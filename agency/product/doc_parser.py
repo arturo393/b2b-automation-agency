@@ -1,18 +1,17 @@
 """
-DocumentParser — extracts structured data from PDFs using Vertex AI (ADC).
+DocumentParser — extracts structured data from PDFs using Gemini.
 This is "The Product" we sell to B2B clients.
 Use case: Parse invoices, contracts, purchase orders → structured JSON.
 """
 import json
-import base64
 from pathlib import Path
 from typing import Dict
-from agency.utils.gemini_client import get_model
+from agency.utils.gemini_client import generate, generate_multimodal
 
 
 class DocumentParser:
     """
-    Extracts structured data from documents using Gemini Vision via Vertex AI.
+    Extracts structured data from documents using Gemini Vision.
     Supports PDF and images.
     """
 
@@ -39,36 +38,24 @@ class DocumentParser:
             raise ValueError(f"Unsupported doc_type. Choose from: {list(self.DOCUMENT_TYPES.keys())}")
         self.doc_type = doc_type
         self.config = self.DOCUMENT_TYPES[doc_type]
-        self.model = get_model("gemini-1.5-pro")  # Pro for vision/document tasks
 
     def parse_file(self, file_path: str) -> Dict:
-        """Parse a local PDF or image file."""
+        """Parse a local PDF or image file via Multimodal Gemini."""
         path = Path(file_path)
         if not path.exists():
             raise FileNotFoundError(f"File not found: {file_path}")
 
         print(f"📄 Parsing {self.doc_type}: {path.name}...")
-
-        # Read and encode the file
-        with open(path, "rb") as f:
-            data = base64.b64encode(f.read()).decode("utf-8")
-
-        mime = "application/pdf" if path.suffix.lower() == ".pdf" else "image/png"
-
         prompt = self._build_prompt()
-
-        # Use Vertex AI multimodal
-        from vertexai.generative_models import Part
-        file_part = Part.from_data(data=base64.b64decode(data), mime_type=mime)
-
-        response = self.model.generate_content([file_part, prompt])
-
-        return self._parse_response(response.text, path.name)
+        
+        # Use our multimodal REST client
+        raw = generate_multimodal(prompt, file_path, model_name="gemini-2.5-flash")
+        
+        return self._parse_response(raw, path.name)
 
     def parse_text(self, text: str) -> Dict:
         """Parse raw text (for testing without a real file)."""
         print(f"📝 Parsing {self.doc_type} from text ({len(text)} chars)...")
-        from agency.utils.gemini_client import generate
         prompt = self._build_prompt() + f"\n\nDocument text:\n{text}"
         raw = generate(prompt)
         return self._parse_response(raw, source="text_input")
