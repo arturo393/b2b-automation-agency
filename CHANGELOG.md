@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 - **Lion Hunter Agent**: Autonomous B2B lead generation agent.
 - **Multimodal Document Intelligence**: Parsing of PDFs and images using Gemini 2.5 Flash.
+- **GovTech Bidding Agent**: Automated analysis of Technical Requirements (Bases Técnicas) and Technical Proposal generation for government tenders.
 - **Infrastructure as Code**: Terraform configurations for GCP Cloud Run and Artifact Registry.
 - **Page Fetcher**: Web scraping capability for deeper lead analysis.
 - **Enhanced Outreach Composer**: Personalized email generation based on web scraping data.

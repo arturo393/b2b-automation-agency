@@ -1,0 +1,31 @@
+BASES ADMINISTRATIVAS Y TÉCNICAS
+ID Licitación: 1122-33-LE26
+Nombre: "Servicio de Digitalización y Extracción Automática de Archivos Históricos de Aduanas"
+Organismo: Servicio Nacional de Aduanas (Gobierno de Chile)
+
+1. OBJETIVO DE LA LICITACIÓN
+El presente proceso licitatorio tiene por objetivo contratar un servicio integral de digitalización, reconocimiento óptico de caracteres (OCR) y extracción estructurada de datos de aproximadamente 500.000 documentos aduaneros históricos (Declaraciones de Ingreso, Facturas Comerciales, y Conocimientos de Embarque).
+
+2. PRESUPUESTO ESTIMADO Y PLAZOS
+- Presupuesto Máximo Disponible: $45.000.000 CLP (Impuestos incluidos).
+- Fecha de Cierre de Postulaciones: 15 de Noviembre de 2026 a las 15:00 hrs.
+- Plazo de Ejecución del Servicio: 6 meses a partir de la firma del contrato.
+
+3. REQUISITOS TÉCNICOS MÍNIMOS (EXCLUYENTES)
+El proveedor adjudicado deberá cumplir con:
+1. Capacidad de procesamiento automatizado o semi-automatizado de imágenes, PDFs y documentos físicos escaneados.
+2. Nivel de precisión en la extracción de datos superior al 95%.
+3. Entrega de los datos procesados en formato estructurado (JSON, CSV o Integración mediante API Rest).
+4. Infraestructura en la nube con altos estándares de seguridad y borrado seguro de la información tras 30 días del procesamiento.
+
+4. CRITERIOS DE EVALUACIÓN
+- Propuesta Técnica (Uso de IA, Precisión, Tiempos): 50%
+- Propuesta Económica: 30%
+- Experiencia del Proveedor: 20%
+
+5. DOCUMENTACIÓN REQUERIDA PARA OFERTAR
+- Anexo 1: Formulario de Identificación del Oferente.
+- Anexo 2: Propuesta Técnica y Metodológica (Detalle de la tecnología a utilizar).
+- Anexo 3: Propuesta Económica.
+- Boleta de Garantía de Seriedad de la Oferta por $500.000 CLP.
+- Certificado de deuda laboral y previsional al día.

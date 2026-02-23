@@ -36,6 +36,12 @@ A multimodal engine that converts unstructured documents into actionable data:
 - **Structured Output**: Returns clean JSON for invoices, contracts, and POs.
 - **Cost Efficient**: Optimized for Gemini 2.5 Flash.
 
+### 3. 🏛️ GovTech Bidding Agent
+A specialized agent for public sector tenders ("Licitaciones"):
+- **Analyzer**: Reads heavy "Bases Técnicas" PDFs to extract budgets, deadlines, and technical requirements.
+- **Scorer**: Evaluates our technical fit and recommends Bid / No-Bid.
+- **Proposal Drafter**: Automatically drafts a Technical Proposal outline in Markdown tailored to the tender's requirements.
+
 ---
 
 ## ⚙️ Quick Start
