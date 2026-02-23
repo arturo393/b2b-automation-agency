@@ -56,12 +56,17 @@ pip install -r requirements.txt
 cp .env.example .env
 ```
 
-### 2. Find Leads
+### 2. Find Private Leads (Hunter)
 ```bash
-python3 -m agency.hunter.main --keyword="logistics companies chile" --limit=3 --proof --history
+python3 agency.py hunt --keyword="logistics companies chile" --limit=3 --proof --history
 ```
 
-### 3. Parse a Document
+### 3. Analyze Government Tenders (Bidding Agent)
+```bash
+python3 agency.py bid --file "data/samples/sample_bases_tecnicas.txt" --draft
+```
+
+### 4. Parse a Document (Product Demo)
 ```bash
 python3 tests/test_parser_multimodal.py
 ```
